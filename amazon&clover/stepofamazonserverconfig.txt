@@ -1,0 +1,85 @@
+amazon links
+
+https://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-event-notifications.html
+
+arn:aws:sns:us-east-2:793235443207:screensaver:4d33a181-408b-4adf-b4d8-cd5a5219d52b
+
+
+amzone link s3
+
+https://console.aws.amazon.com/s3/buckets/acquaint/1KR5EKWTSN0PM/?region=us-east-1&tab=overview
+
+firebase clover
+
+https://console.firebase.google.com/project/screen-saver-172612/settings/cloudmessaging/android:com.screensaver
+
+amazone identifty pool
+https://console.aws.amazon.com/cognito/pool/?region=us-east-1&id=us-east-1:012de2d1-f2eb-45e5-86d7-01b683b92b31
+
+amazon application platform
+
+https://console.aws.amazon.com/sns/v2/home?region=us-east-1#/applications
+
+roles amazon
+https://console.aws.amazon.com/iam/home?#/roles
+
+roles policies
+https://console.aws.amazon.com/iam/home?#/roles/Cognito_acquaintUnauth_Role
+
+
+
+above important links
+
+
+1.Create amazon account
+2.create bucket here https://console.aws.amazon.com/s3/home?region=us-east-1
+	-add s3 bucket permission 
+	-Any authenticated AWS user ->	Read, Write 	Read, Write
+	-Everyone 	-> Read, Write 	Read, Write)
+
+3.open bucket and go to property tab.
+3.Add Notification
+	-ObjectCreate (All)
+	-ObjectDelete (All)
+	please wait for next step open another link in another tab
+
+4.Select topic if topic not create goto 
+https://console.aws.amazon.com/sns/v2/home?region=us-east-1#/applications
+and create application platform using GCM SELECT GCM
+
+enter firebase Web API Key for created project and found Web API Key from go to firebase console->project->settings->Web API Key
+
+5.then goto https://console.aws.amazon.com/sns/v2/home?region=us-east-1#/applications on topic tab 
+	-Create new topic->Topic Name
+	-Display name
+
+
+6.go to step 3 opend tab select sns topic and your topic name save
+	-note:select topic and edit policy to everyone
+in the role sns and s3 full access
+
+7.Create identy pool
+	https://console.aws.amazon.com/cognito/home?region=us-east-1
+	-then go to->Manage Federated Identities->Create new identity pool
+	-Name of identity pool
+	-Enable access to unauthenticated identities check true
+	-Create -> Allow
+	-then go to create identity and edit pool identity
+	-Push synchronization->enable GCM/Application
+	-Create new role for push synchronization
+	-Create role here https://console.aws.amazon.com/iam/home?#/roles
+	-Attach neccessary policy
+
+		AmazonDMSRedshiftS3Role
+	 	AmazonEC2FullAccess
+	 	AmazonS3FullAccess
+	 	QuickSightAccessForS3StorageManagementAnalyticsReadOnly
+		AdministratorAccess
+	 	AmazonSNSReadOnlyAccess
+		AmazonS3ReadOnlyAccess
+		AmazonSNSRole
+		AmazonSNSFullAccess
+
+	
+
+
